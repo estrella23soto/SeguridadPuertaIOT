@@ -57,7 +57,9 @@ del mundo desde tu celular.
 
 ## Prototipo en dibujo
 <img  src= "https://user-images.githubusercontent.com/106614070/214473442-b82c30df-97ae-4185-ad46-248069194034.png" width="200" height="200" />
-<img  src= "hthttps://user-images.githubusercontent.com/106614070/214473462-4a6c549d-8858-4255-b5e4-217ecc972520.png" width="200" height="200" />
+<br/>
+<img  src= "https://user-images.githubusercontent.com/106614070/214473797-86199f32-eb45-40fc-bd21-a32cc1ca3014.png" width="200" height="200" />
+
 
 
 
