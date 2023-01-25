@@ -24,7 +24,7 @@ del mundo desde tu celular.
 | 5| NODE-RED  |  x  | x  |  
 | 5| Motor de base de datos  |  x  | x  | 
 
-|     |             |             |        |          |            |
+
 
 ## Tabla con el hardware utilizado
 
@@ -39,3 +39,23 @@ del mundo desde tu celular.
 |   8|  Protoboard 830 Puntos Mb-102 | El Protoboard 830 pts MB-102 es una tablilla de pruebas, que cuenta con 830 perforaciones divididas en filas horizontales y columnas verticales para realizar conexiones eléctricas, puedes conectar cualquier elemento electrónico para realizar prototipos, prácticas y simulaciones de circuitos electrónicos  | <img  src= "https://user-images.githubusercontent.com/106614070/193472640-0e12c7f3-c74e-4f16-9562-9829b3982a2d.png" width="200" height="200" />|1|$52 |
 |   8| Cables Jumpers Dupont H-h, M-m, H-m 20cm 120 Pzas|  Un cable puente para prototipos (o simplemente puente para prototipos), es un cable con un conector en cada punta (o a veces sin ellos), que se usa normalmente para interconectar entre sí los componentes en una placa de pruebas. | <img  src= "https://user-images.githubusercontent.com/106614070/193472720-f2f6cb77-627d-4a3d-acd6-4f6ec8571d7f.png" width="200" height="200" />|1  |$103|
 |  9 | Motor A Pasos 28byj-48 Con Driver Unl2003 Arduino, Pic| El 28BYJ-48 tiene todo lo necesario para empezar a utilizar motores a pasos en su proyecto. Un motor a pasos convierte los impulsos digitales en pequeños pasos de movimiento en una dirección. Se mueve sólo un paso a la vez, pero puede girar indefinidamente cada vez que se repita la secuencia de pasos.|  <img  src= "https://user-images.githubusercontent.com/106614070/214470613-e65f5ec5-e2bb-438e-a316-3f768d051c45.png" width="200" height="200" />|1 |$66.0 |
+| 10 | Display Lcd 16x2, 1602a Para Arduino, Con Pines Soladados| Este display tiene un tamaño de 16×2 que hace referencia a que la pantalla cuenta con 2 filas y cada fila tiene la capacidad de mostrar 16 caracteres o símbolos, por lo general alfanuméricos, los cuales se pueden definir desde programación utilizando un microcontrolador o tarjeta de desarrollo.|  <img  src= "https://user-images.githubusercontent.com/106614070/214472674-cea987e2-3abc-48dc-8021-204001db7697.png" width="200" height="200" />|1 |$115|
+
+
+
+## Epicas del proyecto (Minimo debe de haber una épica por integrante de equipo)
+- Quiero poder abrir la puerta desde cualquier lugar del mundo donde me encuentre  
+- Como usuario quiero poder visualializar el estatus de mi seguridad desde el celular 
+- Como usuario quiero poder ver el clima en una pantalla lcd y como el clima 
+
+## Tabla de historias de usuario
+| Id  | Historia de usuario  |Prioridad |Estimación|Como probarlo | Responsable |
+|---|---|---|---|---|---|
+| 1  |Quiero poder abrir la puerta desde cualquier lugar del mundo donde me encuentre| Alta  | 3 semanas | Con conexion mqqt y un celular | Cesar Alegandro Ordoñez Osorio |
+|  2 | Como usuario quiero poder visualializar el estatus de mi seguridad desde el celular | Alta  | 2 semanas    | Con las aplicacion movil probando que la puerta abre y cierra correctamente  | Angel Gerardo Velazquez Salazar    |
+|  4 | Como usuario quiero poder ver el clima en una pantalla lcd y como el clima   | Media  | 2 semanas | Probando mando los valores que mandan los se nsores ala pantalla | Cruz Estrella Juárez Soto |
+
+## Prototipo en dibujo
+![image](https://user-images.githubusercontent.com/106614070/214473442-b82c30df-97ae-4185-ad46-248069194034.png)
+![image](https://user-images.githubusercontent.com/106614070/214473462-4a6c549d-8858-4255-b5e4-217ecc972520.png)
+
