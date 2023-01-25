@@ -20,9 +20,9 @@ del mundo desde tu celular.
 | 1 |Visual Studio Code   | 1.71.2  |Freware   |  
 | 2 | Arduino IDE  |2   |   2|   Freeware
 | 3 | Libreria para sensor proximidad  |  x  | x  |  
-| 4| Mosquito  |  x  | x  | 
-| 5| NODE-RED  |  x  | x  |  
-| 5| Motor de base de datos  |  x  | x  | 
+| 4| Mosquito  |   5.0, 3.1.1  | Freware  | 
+| 5| NODE-RED  |  3.0 | Freeware  |  
+| 5| Motor de base de datos  |  x  | Freware | 
 
 
 
