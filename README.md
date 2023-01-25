@@ -4,25 +4,27 @@
 3. Angel Gerardo Velazquez Salazar 
 3. Cruz Estrella Juarez Soto
 ## Objetivo General
-Este proyecto tiene como objetivo atomatizar la seguridad de una puerta esto ayudara para poder abrir una puerta estando en cualquier parte
+Este proyecto tiene como objetivo automatizar la seguridad de una puerta esto ayudara para poder abrir una puerta estando en cualquier parte
 del mundo desde tu celular.
+¿ wu problema resuelve?
+agregar la funcionalidad del temperatura
 
 ## Objetivos especificos 
 1. Diseñar prototipo 
 2. Codificar la aplicación 
 3. Ensanlaje de piezas 
-4. Probrar porototipo 
-5. Liberar prototito 
+4. Probrar prototipo
+5. Liberar prototipo 
 
 ## Tabla de Software utilizado
 |id | Sofware  | Version  |Tipo   
 |---|---|---|---|
-| 1 |Visual Studio Code   | 1.71.2  |Freware   |  
+| 1 |Visual Studio Code   | 1.71.2  |Freeware   |  
 | 2 | Arduino IDE  |2   |   2|   Freeware
 | 3 | Libreria para sensor proximidad  |  x  | x  |  
-| 4| Mosquito  |   5.0, 3.1.1  | Freware  | 
+| 4| Mosquitto  |   5.0, 3.1.1  | Freeware  | 
 | 5| NODE-RED  |  3.0 | Freeware  |  
-| 5| Motor de base de datos  |  x  | Freware | 
+| 5| Motor de base de datos  |  x  | Freeware | 
 
 
 
