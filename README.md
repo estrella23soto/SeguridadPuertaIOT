@@ -42,7 +42,11 @@ agregar la funcionalidad del temperatura
 |   8| Cables Jumpers Dupont H-h, M-m, H-m 20cm 120 Pzas|  Un cable puente para prototipos (o simplemente puente para prototipos), es un cable con un conector en cada punta (o a veces sin ellos), que se usa normalmente para interconectar entre sí los componentes en una placa de pruebas. | <img  src= "https://user-images.githubusercontent.com/106614070/193472720-f2f6cb77-627d-4a3d-acd6-4f6ec8571d7f.png" width="200" height="200" />|1  |$103|
 |  9 | Motor A Pasos 28byj-48 Con Driver Unl2003 Arduino, Pic| El 28BYJ-48 tiene todo lo necesario para empezar a utilizar motores a pasos en su proyecto. Un motor a pasos convierte los impulsos digitales en pequeños pasos de movimiento en una dirección. Se mueve sólo un paso a la vez, pero puede girar indefinidamente cada vez que se repita la secuencia de pasos.|  <img  src= "https://user-images.githubusercontent.com/106614070/214470613-e65f5ec5-e2bb-438e-a316-3f768d051c45.png" width="200" height="200" />|1 |$66.0 |
 | 10 | Display Lcd 16x2, 1602a Para Arduino, Con Pines Soladados| Este display tiene un tamaño de 16×2 que hace referencia a que la pantalla cuenta con 2 filas y cada fila tiene la capacidad de mostrar 16 caracteres o símbolos, por lo general alfanuméricos, los cuales se pueden definir desde programación utilizando un microcontrolador o tarjeta de desarrollo.|  <img  src= "https://user-images.githubusercontent.com/106614070/214472674-cea987e2-3abc-48dc-8021-204001db7697.png" width="200" height="200" />|1 |$115|
+| 11 | Baquelita 20x30 Cm 1 Cara Placa Fenolica Cobre Pcb| Una Placa Fenólica PCB o Baquelita es una lámina de cobre recubierta por un sustrato aislante. Las placas fenólicas pueden ser perforadas o o planas.
+También pueden ser usadas en el proceso de fabricación de circuitos impresos. En esta categoría podrás encontrar distintos tipos y categorías de baquelitas, placa fenólicas o PCB.|  <img  src= "https://user-images.githubusercontent.com/106614070/215224425-ad201015-ca51-4722-ba67-10382ef2d604.png" width="200" height="200" />|1 |$94.50|
 
+|![image]()
+|
 
 
 ## Epicas del proyecto (Minimo debe de haber una épica por integrante de equipo)
