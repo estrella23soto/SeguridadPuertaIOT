@@ -49,6 +49,9 @@ agregar la funcionalidad del temperatura
 - Quiero poder abrir la puerta desde cualquier lugar del mundo donde me encuentre  
 - Como usuario quiero poder visualializar el estatus de mi seguridad desde el celular 
 - Como usuario quiero poder ver el clima en una pantalla lcd y como el clima 
+- 
+- 
+- 
 
 ## Tabla de historias de usuario
 | Id  | Historia de usuario  |Prioridad |Estimación|Como probarlo | Responsable |
