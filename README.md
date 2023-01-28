@@ -67,9 +67,8 @@ El objetivo de este proyecto es proponer una solución a un cierto grupo de pers
 
 
 ## Prototipo en dibujo
-<img  src= "https://user-images.githubusercontent.com/106614070/214473442-b82c30df-97ae-4185-ad46-248069194034.png" width="200" height="200" />
-<br/>
-<img  src= "https://user-images.githubusercontent.com/106614070/214473797-86199f32-eb45-40fc-bd21-a32cc1ca3014.png" width="200" height="200" />
+![image](https://user-images.githubusercontent.com/106614070/215230514-35a28abd-c354-423b-8a5c-ee398c13c89a.png)
+
 
 
 
