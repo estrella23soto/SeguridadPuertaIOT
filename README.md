@@ -4,12 +4,10 @@
 3. Angel Gerardo Velazquez Salazar 
 3. Cruz Estrella Juarez Soto
 ## Objetivo General
-Este proyecto tiene como objetivo automatizar la seguridad de una puerta esto ayudara para poder abrir una puerta estando en cualquier parte
-del mundo desde tu celular.
-¿ wu problema resuelve?
-agregar la funcionalidad del temperatura
+El objetivo de este proyecto es proponer una solución a un cierto grupo de personas que buscan seguridad, privacidad y resguardo de su información hoy en día la información vale más que el dinero este proyecto de internet de la cosas tiene como objetivo especifico salva guardar los más preciado de una habitación la intimidad haciendo esto posible con algo que jamás dejas que es tu celular además este prototipo tendrá las funcione de sentir la presencia y dar alarmas con luz y sonido, así como mandar el estatus a tu teléfono celular, y en simultaneo a un pantalla lcd y como plus también pasar el clima.
 
-## Objetivos especificos 
+
+## Objetivos especificos(por completar) 
 1. Diseñar prototipo 
 2. Codificar la aplicación 
 3. Ensanlaje de piezas 
@@ -24,7 +22,11 @@ agregar la funcionalidad del temperatura
 | 3 | Libreria para sensor proximidad  |  x  | x  |  
 | 4| Mosquitto  |   5.0, 3.1.1  | Freeware  | 
 | 5| NODE-RED  |  3.0 | Freeware  |  
-| 5| Motor de base de datos  |  x  | Freeware | 
+| 6| Motor de base de datos  |  x  | Freeware | 
+| 7 | LIbreria para el buzzer |    | Freeware |
+| 8 | Libreria de wifi esp32 |  se actulizara en el momento de la codificacion para obtener la ultima version ocupada   | Freeware  |
+| 9 | Libreria Bluetooth esp32 | x   | Freeware |
+| 10 | Libreria para el sensor de proximidad | x   | Freeware |
 
 
 
@@ -42,7 +44,7 @@ agregar la funcionalidad del temperatura
 |   8| Cables Jumpers Dupont H-h, M-m, H-m 20cm 120 Pzas|  Un cable puente para prototipos (o simplemente puente para prototipos), es un cable con un conector en cada punta (o a veces sin ellos), que se usa normalmente para interconectar entre sí los componentes en una placa de pruebas. | <img  src= "https://user-images.githubusercontent.com/106614070/193472720-f2f6cb77-627d-4a3d-acd6-4f6ec8571d7f.png" width="200" height="200" />|1  |$103|
 |  9 | Motor A Pasos 28byj-48 Con Driver Unl2003 Arduino, Pic| El 28BYJ-48 tiene todo lo necesario para empezar a utilizar motores a pasos en su proyecto. Un motor a pasos convierte los impulsos digitales en pequeños pasos de movimiento en una dirección. Se mueve sólo un paso a la vez, pero puede girar indefinidamente cada vez que se repita la secuencia de pasos.|  <img  src= "https://user-images.githubusercontent.com/106614070/214470613-e65f5ec5-e2bb-438e-a316-3f768d051c45.png" width="200" height="200" />|1 |$66.0 |
 | 10 | Display Lcd 16x2, 1602a Para Arduino, Con Pines Soladados| Este display tiene un tamaño de 16×2 que hace referencia a que la pantalla cuenta con 2 filas y cada fila tiene la capacidad de mostrar 16 caracteres o símbolos, por lo general alfanuméricos, los cuales se pueden definir desde programación utilizando un microcontrolador o tarjeta de desarrollo.|  <img  src= "https://user-images.githubusercontent.com/106614070/214472674-cea987e2-3abc-48dc-8021-204001db7697.png" width="200" height="200" />|1 |$115|
-| 10 | Baquelita 20x30 Cm 1 Cara Placa Fenolica Cobre Pcb| Una Placa Fenólica PCB o Baquelita es una lámina de cobre recubierta por un sustrato aislante. Las placas fenólicas pueden ser perforadas o o planas.También pueden ser usadas en el proceso de fabricación de circuitos impresos. En esta categoría podrás encontrar distintos tipos y categorías de baquelitas, placa fenólicas o PCB.|  <img  src= "https://user-images.githubusercontent.com/106614070/215226423-5f93fdbb-4ffc-42c2-8c63-0627cf4bca79.png" width="200" height="200" />|1 |$115|
+| 11 | Baquelita 20x30 Cm 1 Cara Placa Fenolica Cobre Pcb| Una Placa Fenólica PCB o Baquelita es una lámina de cobre recubierta por un sustrato aislante. Las placas fenólicas pueden ser perforadas o o planas.También pueden ser usadas en el proceso de fabricación de circuitos impresos. En esta categoría podrás encontrar distintos tipos y categorías de baquelitas, placa fenólicas o PCB.|  <img  src= "https://user-images.githubusercontent.com/106614070/215226423-5f93fdbb-4ffc-42c2-8c63-0627cf4bca79.png" width="200" height="200" />|1 |$99|
 
 
 
@@ -51,9 +53,7 @@ agregar la funcionalidad del temperatura
 - Quiero poder abrir la puerta desde cualquier lugar del mundo donde me encuentre  
 - Como usuario quiero poder visualializar el estatus de mi seguridad desde el celular 
 - Como usuario quiero poder ver el clima en una pantalla lcd y como el clima 
-- 
-- 
-- 
+
 
 ## Tabla de historias de usuario
 | Id  | Historia de usuario  |Prioridad |Estimación|Como probarlo | Responsable |
