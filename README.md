@@ -24,10 +24,10 @@ El objetivo de este proyecto es proponer una solución a un cierto grupo de pers
 | 5| NODE-RED  |  3.0 | Freeware  |  
 | 6| Motor de base de datos  |  x  | Freeware | 
 | 7 | LIbreria para el buzzer |    | Freeware |
-| 8 | Libreria de wifi esp32 |  se actulizara en el momento de la codificacion para obtener la ultima version ocupada   | Freeware  |
+| 8 | Libreria de wifi esp32 |  se actulizara en el momento de la codificacion para obtener la ultima version ocupada(x)   | Freeware  |
 | 9 | Libreria Bluetooth esp32 | x   | Freeware |
-| 10 | Libreria para el sensor de proximidad | x   | Freeware |
-
+| 10 | Libreria para el sensor de temperatura | x   | Freeware |
+| 10 | Libreria para el sensor de lcd | x   | Freeware |
 
 
 ## Tabla con el hardware utilizado
@@ -59,8 +59,12 @@ El objetivo de este proyecto es proponer una solución a un cierto grupo de pers
 | Id  | Historia de usuario  |Prioridad |Estimación|Como probarlo | Responsable |
 |---|---|---|---|---|---|
 | 1  |Quiero poder abrir la puerta desde cualquier lugar del mundo donde me encuentre| Alta  | 3 semanas | Con conexion mqqt y un celular | Cesar Alegandro Ordoñez Osorio |
-|  2 | Como usuario quiero poder visualializar el estatus de mi seguridad desde el celular | Alta  | 2 semanas    | Con las aplicacion movil probando que la puerta abre y cierra correctamente  | Angel Gerardo Velazquez Salazar    |
-|  4 | Como usuario quiero poder ver el clima en una pantalla lcd y como el clima   | Media  | 2 semanas | Probando mando los valores que mandan los se nsores ala pantalla | Cruz Estrella Juárez Soto |
+|  2| Como usuario quiero poder ver el clima en una pantalla lcd y como el clima   | Media  | 2 semanas | Probando mando los valores que mandan los se nsores ala pantalla | Cruz Estrella Juárez Soto |
+|  3 | Yo como usuario quiero poder visualizar el estatus de la puerta desde mi celular en una aplicación web responsiva   | Media  | 3 semanas | Probando mando los valores que mandan los sensores ala aplicacion web | Cruz Estrella Juárez Soto |
+|  4 | Yo como usuario quiero poder escuchar una alerta de luz y sonido cuando una puerta en especifico se abierta o cerrada  | Alta  | 2 semanas    | Con las aplicacion web resposiva probando que el seguro abre y cierra correctamete  | Angel Gerardo Velazquez Salazar |
+|  5 | Yo como usuario quiero poder visualizar el estatus de mi seguro inteligente en una pantalla lcd además de visualizar el clima del momento en el que me encuentro de salida de una habitación en especifico  | media  | 2 semanas    | Captando los valores que viene de los sensores y pasandolos ala pantalla  | Angel Gerardo Velazquez Salazar |
+| 1  |Como usuario de la cerradura inteligente quiero poder  asegurar la puerta cada 5 minutos de no haber detectado presencia humana| Alta  | 3 semanas | Reciviendo los valores deuna sensor mandar indicaciones al motor y activar la seguridad | Cesar Alegandro Ordoñez Osorio |
+
 
 ## Prototipo en dibujo
 <img  src= "https://user-images.githubusercontent.com/106614070/214473442-b82c30df-97ae-4185-ad46-248069194034.png" width="200" height="200" />
