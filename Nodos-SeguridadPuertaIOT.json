@@ -1,0 +1,586 @@
+[
+    {
+        "id": "8ec7c177039f3301",
+        "type": "tab",
+        "label": "IOT",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "94dfeef4550e7a54",
+        "type": "mqtt in",
+        "z": "8ec7c177039f3301",
+        "name": "SUSCRIPTOR",
+        "topic": "micasa/plantabaja/temperatura",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "a90b13cb.1595c",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 80,
+        "y": 260,
+        "wires": [
+            [
+                "d2f6823ea91b316e",
+                "e015e2820ed72b9d",
+                "9104ade2a84a3037"
+            ]
+        ]
+    },
+    {
+        "id": "d2f6823ea91b316e",
+        "type": "function",
+        "z": "8ec7c177039f3301",
+        "name": "Temp",
+        "func": "var temperatura = msg.payload = msg.payload.split(\",\")[0]; \n\n//msg.topic = \"INSERT INTO sensor_value(id_sensor, value)VALUES(1, '\"+temperatura+\"');\"\nmsg.topic = \"INSERT INTO valores (value, sensor_id) VALUES ('\"+temperatura+\"', 1);\"\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 270,
+        "y": 240,
+        "wires": [
+            [
+                "97782c01e9628ed0",
+                "49c321a5bc541b5b"
+            ]
+        ]
+    },
+    {
+        "id": "e015e2820ed72b9d",
+        "type": "function",
+        "z": "8ec7c177039f3301",
+        "name": "hum",
+        "func": "if (typeof msg.payload === 'string') {\n    msg.payload = msg.payload.split(\",\")[1];\n}\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 270,
+        "y": 320,
+        "wires": [
+            [
+                "91c66d2455f3ff9e"
+            ]
+        ]
+    },
+    {
+        "id": "97782c01e9628ed0",
+        "type": "ui_gauge",
+        "z": "8ec7c177039f3301",
+        "name": "",
+        "group": "d882515cef736e94",
+        "order": 2,
+        "width": "0",
+        "height": "0",
+        "gtype": "gage",
+        "title": "Temperatura",
+        "label": "C",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#b3007a",
+            "#006fe6",
+            "#cbbe3a"
+        ],
+        "seg1": "40",
+        "seg2": "70",
+        "diff": false,
+        "className": "",
+        "x": 470,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "91c66d2455f3ff9e",
+        "type": "ui_gauge",
+        "z": "8ec7c177039f3301",
+        "name": "",
+        "group": "d882515cef736e94",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Humedad",
+        "label": "%",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "30",
+        "seg2": "70",
+        "diff": false,
+        "className": "",
+        "x": 480,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "84c0c46ec3945a97",
+        "type": "mqtt out",
+        "z": "8ec7c177039f3301",
+        "name": "",
+        "topic": "micasa/plantabaja/servo",
+        "qos": "2",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "a90b13cb.1595c",
+        "x": 730,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "49c321a5bc541b5b",
+        "type": "mysql",
+        "z": "8ec7c177039f3301",
+        "d": true,
+        "mydb": "72e1dcf3638171c8",
+        "name": "",
+        "x": 770,
+        "y": 140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7aeeb1db9e19025d",
+        "type": "ui_switch",
+        "z": "8ec7c177039f3301",
+        "name": "",
+        "label": "Actuadores",
+        "tooltip": "",
+        "group": "111b7fbc09e42ec1",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "micasa/plantabaja/servo",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 350,
+        "y": 500,
+        "wires": [
+            [
+                "84c0c46ec3945a97"
+            ]
+        ]
+    },
+    {
+        "id": "48cbbe54bef206b9",
+        "type": "inject",
+        "z": "8ec7c177039f3301",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 240,
+        "y": 160,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9104ade2a84a3037",
+        "type": "ui_chart",
+        "z": "8ec7c177039f3301",
+        "name": "",
+        "group": "7683cf1dabc37995",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "label": "Historico",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 200,
+        "y": 440,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "bf610894b67bfc0f",
+        "type": "mqtt out",
+        "z": "8ec7c177039f3301",
+        "name": "",
+        "topic": "micasa/plantabaja/buzzer",
+        "qos": "2",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "a90b13cb.1595c",
+        "x": 690,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "e65260590803ab22",
+        "type": "ui_switch",
+        "z": "8ec7c177039f3301",
+        "name": "",
+        "label": "buzzer",
+        "tooltip": "",
+        "group": "111b7fbc09e42ec1",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "micasa/plantabaja/servo",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 390,
+        "y": 580,
+        "wires": [
+            [
+                "bf610894b67bfc0f"
+            ]
+        ]
+    },
+    {
+        "id": "d2b83d673f03c26b",
+        "type": "mqtt in",
+        "z": "8ec7c177039f3301",
+        "name": "SUSCRIPTOR",
+        "topic": "micasa/plantabaja/inclinacion",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "a90b13cb.1595c",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 100,
+        "y": 660,
+        "wires": [
+            [
+                "e8bf519440115b3e",
+                "cd66cf3d90acf493"
+            ]
+        ]
+    },
+    {
+        "id": "e8bf519440115b3e",
+        "type": "function",
+        "z": "8ec7c177039f3301",
+        "name": "Inclinacion",
+        "func": "\nvar incli= msg.payload = parseInt(msg.payload);\nmsg.topic = \"INSERT INTO valores (value, sensor_id) VALUES ('\" + incli + \"', 4);\"\nreturn msg;\n\n\n\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 330,
+        "y": 660,
+        "wires": [
+            [
+                "c7b3b98acc8e94c1"
+            ]
+        ]
+    },
+    {
+        "id": "e506c7b4b0234913",
+        "type": "mqtt in",
+        "z": "8ec7c177039f3301",
+        "name": "SUSCRIPTOR",
+        "topic": "micasa/plantabaja/pir",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "a90b13cb.1595c",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 120,
+        "y": 740,
+        "wires": [
+            [
+                "315331eb2f78a755"
+            ]
+        ]
+    },
+    {
+        "id": "3a0ffc65a889eaec",
+        "type": "ui_gauge",
+        "z": "8ec7c177039f3301",
+        "name": "",
+        "group": "1a5bd7996b177666",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "gtype": "compass",
+        "title": "Sensor de Movimineto",
+        "label": "Interos",
+        "format": "{{value}}",
+        "min": 0,
+        "max": 10,
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 560,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "315331eb2f78a755",
+        "type": "function",
+        "z": "8ec7c177039f3301",
+        "name": "PIR",
+        "func": "var pir =msg.payload = Number(msg.payload);\nmsg.topic = \"INSERT INTO valores (value, sensor_id) VALUES ('\" + pir + \"', 2);\"\nreturn { payload: msg.payload };\n\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 290,
+        "y": 740,
+        "wires": [
+            [
+                "3a0ffc65a889eaec"
+            ]
+        ]
+    },
+    {
+        "id": "c7b3b98acc8e94c1",
+        "type": "ui_gauge",
+        "z": "8ec7c177039f3301",
+        "name": "",
+        "group": "d882515cef736e94",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "gtype": "compass",
+        "title": "Inclinacion",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": 10,
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 530,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "cd66cf3d90acf493",
+        "type": "ui_chart",
+        "z": "8ec7c177039f3301",
+        "name": "",
+        "group": "7683cf1dabc37995",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "label": "Inlcinacion His",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#45653e",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 140,
+        "y": 540,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a90b13cb.1595c",
+        "type": "mqtt-broker",
+        "name": "Local",
+        "broker": "127.0.0.1",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "d882515cef736e94",
+        "type": "ui_group",
+        "name": "Inclinacion",
+        "tab": "001f83e31a3acf90",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "72e1dcf3638171c8",
+        "type": "MySQLdatabase",
+        "name": "",
+        "host": "127.0.0.1",
+        "port": "3306",
+        "db": "iot3",
+        "tz": "",
+        "charset": "UTF8"
+    },
+    {
+        "id": "111b7fbc09e42ec1",
+        "type": "ui_group",
+        "name": "actuadores",
+        "tab": "001f83e31a3acf90",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "7683cf1dabc37995",
+        "type": "ui_group",
+        "name": "Historicos",
+        "tab": "001f83e31a3acf90",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "1a5bd7996b177666",
+        "type": "ui_group",
+        "name": "Pir",
+        "tab": "001f83e31a3acf90",
+        "order": 4,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "001f83e31a3acf90",
+        "type": "ui_tab",
+        "name": "Monitoreos",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    }
+]
