@@ -69,6 +69,9 @@ El objetivo de este proyecto es proponer una solución a un cierto grupo de pers
 
 ## Prototipo en dibujo
 ![image](https://user-images.githubusercontent.com/106614070/215230514-35a28abd-c354-423b-8a5c-ee398c13c89a.png)
+## Prototipo Terminado
+![image](https://user-images.githubusercontent.com/106614070/233870853-0b588b15-18d0-48d0-9bba-20d92202bc13.png)
+
 
 
 
