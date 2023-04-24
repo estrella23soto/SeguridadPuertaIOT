@@ -72,7 +72,8 @@ El objetivo de este proyecto es proponer una solución a un cierto grupo de pers
 ## Prototipo Terminado
 ![image](https://user-images.githubusercontent.com/106614070/233870853-0b588b15-18d0-48d0-9bba-20d92202bc13.png)
 ##Diagrama de Conexion
-![image](https://user-images.githubusercontent.com/106614070/234056009-90e61331-2d99-4f79-ab5e-51ed3db24998.png)
+![image](https://user-images.githubusercontent.com/106614070/234058592-eb3bd900-5076-40a1-84c1-fd3bd3e72eea.png)
+
 
 
 
